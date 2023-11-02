@@ -1,30 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Anmeldefenster</title>
-</head>
-<body>
-    <div id="app">
-        <h1>Anmeldefenster</h1>
-        <div v-if="loggedIn">
-            <p>Du bist nun angemeldet.</p>
-            <button @click="logout">Abmelden</button>
-        </div>
-        <div v-else>
-            <p>Du bist noch nicht angemeldet. Melde dich jetzt an. </p>
-            <form @submit.prevent="login">
-                <label for="username">Benutzername:</label>
-                <input type="text" id="username" v-model="username">
-                <br><br>
-                <label for="password">Passwort:</label>
-                <input type="password" id="password" v-model="password">
-                <br><br>
-                <button type="submit">Anmelden</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="app.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
