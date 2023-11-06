@@ -60,7 +60,9 @@
           <option value="mm">MM</option>
         </select>
         <input id="amount" type="text" name="amount" value="" placeholder="Enter a Value" required style="color:black">
-        <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black">
+        <div id="ifbase" style="display: none;">
+          <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black">
+        </div>
         <input id="dpi" type="text" name="dpi" value="96" placeholder="Enter a Base"  style="color:black">
         <input id="convert" type="submit" name="convert" value="Convert" style="color:black"> <br> <br> 
         <h3>
