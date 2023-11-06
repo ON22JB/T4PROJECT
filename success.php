@@ -9,6 +9,12 @@
     $sql="select * from vueuser where id='".$_SESSION['user']."'";
     $query=$conn->query($sql);
     $row=$query->fetch_array();
+
+    #FONT SIZE FOR EXAMPLE TEXT
+    if (isset($_POST['fontSize'])) {
+      $_SESSION['fontSize'] = $_POST['fontSize'];
+  }
+  $fontSize = isset($_SESSION['fontSize']) ? $_SESSION['fontSize'] : 16;
  
 ?>
 <!DOCTYPE html>
@@ -21,16 +27,14 @@
     <div class="container">
         <div class="jumbotron" style="background-color: #404040;">
             <h1 class="text-center">Welcome, <?php echo $row['username']; ?>!</h1>
-            <p> You are now logged in. </p> <br> <br> <br>
-
-
+            <p> You are now logged in. </p> <hr>
 
 <!------------------CONVERSION------------------->
 
 <div>
-      <p>Unit Converter</p>
+      <h2>Unit Converter</h2>
       <form class="" action="distance converter.php" method="post">
-        <label for="">Select a Conversion Unit</label><br>
+        <label for="">Select the conversion units</label><br>
         <select class="" name="Unit1" required style="color:black">
           <option option selected hidden>Convert from</option>
           <option value="px">PX</option>
@@ -48,16 +52,20 @@
           <option value="in">IN</option>
           <option value="cm">CM</option>
           <option value="mm">MM</option>
-        </select>
-        <input id="amount" type="text" name="amount" value="" placeholder="Enter a Value" required style="color:black">
-          <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black">
-        <input id="dpi" type="text" name="dpi" value="96" placeholder="Enter a Base"  style="color:black">
+        </select> <br> <br>
+        <input id="amount" type="text" name="amount" value="" placeholder="Enter a Value" required style="color:black"> <br> <br>
+        <div class="basediv">
+        <label> Enter the base. The standard is 16px. </label> <br> 
+        <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black"> <br> <br>
+        </div>
+        <div class="dpidiv">
+        <label> Enter your dpi. The standard is 96. </label><br> 
+        <input id="dpi" type="text" name="dpi" value="96" placeholder="Enter a Base"  style="color:black"> <br> <br>
+        </div>
         <input id="convert" type="submit" name="convert" value="Convert" style="color:black"> <br> <br> 
         <h3>
           <?php
-
             if (isset($_POST['convert'])) {
-              echo "";
               $amount=$_POST['amount'];
               $option1=$_POST['Unit1'];
               $option2=$_POST['Unit2'];
@@ -217,16 +225,26 @@
     </div>
 
 
-  
-
 <!------------------------------------->
 
 
+<!-----------------EXAMPLE-------------------->
+<p> Want to test out different font sizes? Try out this function. </p>
+<form method="post">
+        <label for="fontSizeSlider">Adjust Font Size:</label>
+        <input type="range" id="fontSizeSlider" name="fontSize" min="10" max="150" step="1" value="<?php echo $fontSize; ?>">
+        <span id="fontSizeValue"><?php echo $fontSize." px"; ?></span>
+
+        <p style="font-size: <?php echo $fontSize; ?>px;">
+            This is an Example. 
+        </p>
+
+        <input type="submit" value="Apply" style="background-color: white; border-style: none; color: #404040;">
+    </form>
 
 
-
-        <br> <br> <br>
-
+        <br> 
+        <hr>
             <a href="logout.php" class="btn btn-primary" style="background-color: white; border-style: none; color: #404040;" onmouseover="this.style.backgroundColor='#ff0000'" onmouseout="this.style.backgroundColor='white'"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
         </div>
     </div>
