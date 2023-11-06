@@ -29,6 +29,7 @@
             <h1 class="text-center">Welcome, <?php echo $row['username']; ?>!</h1>
             <p> You are now logged in. </p> <hr>
 
+
 <!------------------CONVERSION------------------->
 
 <div>
@@ -217,27 +218,23 @@
             }
 
 
-           ?>
+           ?>       
         </h3>
 
-      </form>
-
+        </form>
     </div>
 
-
-<!------------------------------------->
 
 
 <!-----------------EXAMPLE-------------------->
 <p> Want to test out different font sizes? Try out this function. </p>
 <form method="post">
-        <label for="fontSizeSlider">Adjust Font Size:</label>
-        <input type="range" id="fontSizeSlider" name="fontSize" min="10" max="150" step="1" value="<?php echo $fontSize; ?>">
+        <label for="fontSizeSlider">Adjust Font Size:</label> <br>
         <span id="fontSizeValue"><?php echo $fontSize." px"; ?></span>
+        <input type="range" id="fontSizeSlider" name="fontSize" min="10" max="150" step="1" value="<?php echo $fontSize; ?>">
 
-        <p style="font-size: <?php echo $fontSize; ?>px;">
-            This is an Example. 
-        </p>
+        <input style="color: white; background-color: #404040; border-style: none; font-size: <?php echo $fontSize; ?>px;" value="This is an Example."> <br>
+
 
         <input type="submit" value="Apply" style="background-color: white; border-style: none; color: #404040;">
     </form>
