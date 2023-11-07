@@ -72,7 +72,7 @@
 				<input type="text" class="form-control" v-model="clickUnit.mm">
 			</div>
 		</div>
-		<hr>
+		<br>
 		<div class="modalFooter">
 			<div class="footerBtn pull-right">
 				<button class="btn btn-default" @click="showEditModal = false"><span class="glyphicon glyphicon-remove"></span> Cancel</button> <button class="btn btn-success" @click="showEditModal = false; updateUnit();"><span class="glyphicon glyphicon-check"></span> Save</button>
@@ -92,7 +92,7 @@
 			<h5 class="text-center">Are you sure you want to Delete</h5>
 			<h2 class="text-center">{{clickUnit.px}} {{clickUnit.pt}} {{clickUnit.em}} {{clickUnit.inch}} {{clickUnit.cm}} {{clickUnit.mm}}</h2>
 		</div>
-		<hr>
+		<br>
 		<div class="modalFooter">
 			<div class="footerBtn pull-right">
 				<button class="btn btn-default" @click="showDeleteModal = false"><span class="glyphicon glyphicon-remove"></span> Cancel</button> <button class="btn btn-danger" @click="showDeleteModal = false; deleteUnit(); "><span class="glyphicon glyphicon-trash"></span> Yes</button>

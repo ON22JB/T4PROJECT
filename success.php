@@ -56,11 +56,11 @@
         </select> <br> <br>
         <input id="amount" type="text" name="amount" value="" placeholder="Enter a Value" required style="color:black"> <br> <br>
         <div class="basediv">
-        <label> Enter the base. The standard is 16px. </label> <br> 
+        <label> Enter the base. The standard is 16px. <br> The base is needed for px and em calculations. </label> <br> 
         <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black"> <br> <br>
         </div>
         <div class="dpidiv">
-        <label> Enter your dpi. The standard is 96. </label><br> 
+        <label> Enter your dpi. The standard is 96. <br> The dpi is needed for px and inch calculations.</label><br> 
         <input id="dpi" type="text" name="dpi" value="96" placeholder="Enter a Base"  style="color:black"> <br> <br>
         </div>
         <input id="convert" type="submit" name="convert" value="Convert" style="color:black"> <br> <br> 
