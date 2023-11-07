@@ -70,7 +70,9 @@
         </form>
     </div> <br> <hr>
 
+<!-----------------CRUD TABLE-------------------->
 
+<div> <?php include('crud.php'); ?> </div> <br> <hr>
 
 <!-----------------EXAMPLE-------------------->
 <p> Want to test out different font sizes? Try out this function. </p>
