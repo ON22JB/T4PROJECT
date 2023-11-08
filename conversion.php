@@ -1,11 +1,13 @@
 <?php
+$outputresult = "Choose a Conversion Option";
             if (isset($_POST['convert'])) {
               $amount=$_POST['amount'];
               $option1=$_POST['Unit1'];
               $option2=$_POST['Unit2'];
               #SAME UNITS
               if ($option1==$option2) {
-                echo "Please choose two different units to convert.";
+                $outputresult = "Please choose two different units to convert.";
+                $result = null;
             }
             #PX and PT
             if ($option1=='px' && $option2=='pt') {
@@ -124,12 +126,10 @@
             if ($result !== null) {
                 $outputresult = '';
                 $outputresult = $amount . " " . $option1 . " " . "=" . " " . $result . " " . $option2;
-              } else {
-                $outputresult = "Conversion not supported.";
-              }
+              } 
 
             }else {
-              echo "Choose a Conversion Option";
+                $outputresult = "Choose a Conversion Option";
             }
 
            ?>  
