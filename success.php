@@ -32,11 +32,11 @@
 
 <!------------------CONVERSION------------------->
 
-<div>
+<div id="selection">
       <h2>Unit Converter</h2>
       <form class="" action="distance converter.php" method="post">
         <label for="">Select the conversion units</label><br>
-        <select class="" name="Unit1" required style="color:black">
+        <select class="" name="Unit1" required style="color:black" v-model="option1" @change="toggleBasedivVisibility">
           <option option selected hidden>Convert from</option>
           <option value="px">PX</option>
           <option value="pt">PT</option>
@@ -45,7 +45,7 @@
           <option value="cm">CM</option>
           <option value="mm">MM</option>
         </select>
-        <select class="" name="Unit2" required style="color:black">
+        <select class="" name="Unit2" required style="color:black" v-model="option2" @change="toggleBasedivVisibility">
           <option option selected hidden>Convert to</option>
           <option value="px">PX</option>
           <option value="pt">PT</option>
@@ -55,12 +55,12 @@
           <option value="mm">MM</option>
         </select> <br> <br>
         <input id="amount" type="text" name="amount" value="" placeholder="Enter a Value" required style="color:black"> <br> <br>
-        <div class="basediv">
-        <label> Enter the base. The standard is 16px. <br> The base is needed for px and em calculations. </label> <br> 
+        <div class="basediv" id="basediv" name="basediv" v-if="isBasedivVisible">
+        <label> Enter the base. The standard is 16px. <br> The base is only needed for specific calculations. </label> <br> 
         <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black"> <br> <br>
         </div>
-        <div class="dpidiv">
-        <label> Enter your dpi. The standard is 96. <br> The dpi is needed for px and inch calculations.</label><br> 
+        <div class="dpidiv" id="dpidiv" name="dpidiv" v-if="isDpidivVisible">
+        <label> Enter your dpi. The standard is 96. <br> The dpi is only needed for specific calculations.</label><br> 
         <input id="dpi" type="text" name="dpi" value="96" placeholder="Enter a Base"  style="color:black"> <br> <br>
         </div>
         <input id="convert" type="submit" name="convert" value="Convert" style="color:black"> <br> <br> 
@@ -94,5 +94,6 @@
             <a href="logout.php" class="btn btn-primary" style="background-color: white; border-style: none; color: #404040;" onmouseover="this.style.backgroundColor='#ff0000'" onmouseout="this.style.backgroundColor='white'"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
         </div>
     </div>
+    <script src="hideandshow.js"></script>
 </body>
 </html>
