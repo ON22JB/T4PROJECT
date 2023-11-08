@@ -66,6 +66,7 @@
         <input id="convert" type="submit" name="convert" value="Convert" style="color:black"> <br> <br> 
         <h3> 
            <?php include('conversion.php'); ?>
+           <?php echo $outputresult;?>
         </h3>
         </form>
     </div> <br> <hr>
