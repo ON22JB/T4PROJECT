@@ -3,8 +3,6 @@
               $amount=$_POST['amount'];
               $option1=$_POST['Unit1'];
               $option2=$_POST['Unit2'];
-              $base=$_POST['base'];
-              $dpi=$_POST['dpi'];
               #SAME UNITS
               if ($option1==$option2) {
                 echo "Please choose two different units to convert.";
@@ -18,30 +16,38 @@
             }
             #PX and EM
             if ($option1=='px' && $option2=='em') {
+                $base=$_POST['base'];
                 $result=$amount/$base;
             }
             if ($option1=='em' && $option2=='px') {
+                $base=$_POST['base'];
               $result=$amount*$base;
             }
             #PX and IN
             if ($option1=='px' && $option2=='in') {
+                $dpi=$_POST['dpi'];
                 $result=$amount/$dpi;
             }
             if ($option1=='in' && $option2=='px') {
+                $dpi=$_POST['dpi'];
               $result=$amount*$dpi;
             }
             #PX and CM
             if ($option1=='px' && $option2=='cm') {
+                $dpi=$_POST['dpi'];
               $result=$amount*2.54/$dpi;
             }
             if ($option1=='cm' && $option2=='px') {
+                $dpi=$_POST['dpi'];
               $result=$amount/2.54*$dpi;
             }
             #PX and MM
             if ($option1=='px' && $option2=='mm') {
+                $dpi=$_POST['dpi'];
               $result=$amount*25.4/$dpi;
             }
             if ($option1=='mm' && $option2=='px') {
+                $dpi=$_POST['dpi'];
               $result=$amount/25.4*$dpi;
             }
             #PT and EM

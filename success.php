@@ -57,11 +57,11 @@
         <input id="amount" type="text" name="amount" value="" placeholder="Enter a Value" required style="color:black"> <br> <br>
         <div class="basediv" id="basediv" name="basediv" v-if="isBasedivVisible">
         <label> Enter the base. The standard is 16px. <br> The base is only needed for specific calculations. </label> <br> 
-        <input id="base" type="text" name="base" value="16" placeholder="Enter a Base"  style="color:black"> <br> <br>
+        <input id="base" type="text" name="base" value="16"   style="color:black"> <br> <br>
         </div>
         <div class="dpidiv" id="dpidiv" name="dpidiv" v-if="isDpidivVisible">
         <label> Enter your dpi. The standard is 96. <br> The dpi is only needed for specific calculations.</label><br> 
-        <input id="dpi" type="text" name="dpi" value="96" placeholder="Enter a Base"  style="color:black"> <br> <br>
+        <input id="dpi" type="text" name="dpi" value="96"   style="color:black"> <br> <br>
         </div>
         <input id="convert" type="submit" name="convert" value="Convert" style="color:black"> <br> <br> 
         <h3> 
