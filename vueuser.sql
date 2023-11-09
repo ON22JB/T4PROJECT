@@ -40,6 +40,7 @@ CREATE TABLE `vueuser` (
 INSERT INTO `vueuser` (`id`, `username`, `password`) VALUES
 (1, 'test', '123456'),
 (2, 'user', 'secret');
+(3, 'Christian', 'Albert123');
 
 --
 -- Indexes for dumped tables

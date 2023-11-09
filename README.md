@@ -1,5 +1,5 @@
-Es wurden zwei Benutzer angelegt. 
-Jeweils erscheint eine andere Begrüßung. ("Welcome, user!"/"Welcome, test!")
+Es wurden drei Benutzer angelegt. 
+Jeweils erscheint eine andere Begrüßung. ("Welcome, user!"/"Welcome, test!"/"Welcome, Christian!")
 
 Die Daten zum Einloggen lauten:
 
@@ -8,6 +8,9 @@ password: secret
 
 username: test
 password: 123456
+
+username: Christian
+password: Albert123
 
 Weitere Benutzer könnten vom Admin in der Datenbank erstellt werden. 
 
