@@ -51,6 +51,10 @@
 	height:36px;
 }
 
+span.headerTitle{
+	color: #fff;
+}
+
 .footerBtn{
 	margin-right:10px;
 	margin-top:-9px;

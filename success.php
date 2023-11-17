@@ -82,7 +82,7 @@
         <span id="fontSizeValue"><?php echo $fontSize." px"; ?></span>
         <input type="range" id="fontSizeSlider" name="fontSize" min="10" max="150" step="1" value="<?php echo $fontSize; ?>">
 
-        <input style="color: white; background-color: #404040; border-style: none; font-size: <?php echo $fontSize; ?>px;" value="This is an Example."> <br>
+        <input style="color: white; background-color: #404040; border-style: none; font-size: <?php echo $fontSize; ?>px; display: block; max-width: 100%; " value="This is an Example."> <br>
 
 
         <input type="submit" value="Apply" style="background-color: white; border-style: none; color: #404040;">
