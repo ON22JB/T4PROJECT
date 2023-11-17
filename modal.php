@@ -90,7 +90,7 @@
 		</div>
 		<div class="modalBody">
 			<h5 class="text-center">Are you sure you want to Delete</h5>
-			<h2 class="text-center">{{clickUnit.px}} {{clickUnit.pt}} {{clickUnit.em}} {{clickUnit.inch}} {{clickUnit.cm}} {{clickUnit.mm}}</h2>
+			<h2 class="text-center">{{clickUnit.px}} px <br>{{clickUnit.pt}} pt<br>{{clickUnit.em}} em <br>{{clickUnit.inch}} inch <br>{{clickUnit.cm}} cm <br>{{clickUnit.mm}} mm</h2>
 		</div>
 		<br>
 		<div class="modalFooter">
