@@ -12,6 +12,9 @@ password: 123456
 username: Christian
 password: Albert123
 
+username: Tim
+password: Lammarsch123
+
 Weitere Benutzer könnten vom Admin in der Datenbank erstellt werden. 
 
 Exportdateien der Datenbank mit beiden Tabellen (crud & vueuser) sind angehangen:
