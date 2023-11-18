@@ -1,5 +1,5 @@
-Es wurden drei Benutzer angelegt. 
-Jeweils erscheint eine andere Begrüßung. ("Welcome, user!"/"Welcome, test!"/"Welcome, Christian!")
+Es wurden vier Benutzer angelegt. 
+Jeweils erscheint eine andere Begrüßung. ("Welcome, user!"/"Welcome, test!"/"Welcome, Christian!"/"Welcome, Tim!")
 
 Die Daten zum Einloggen lauten:
 
